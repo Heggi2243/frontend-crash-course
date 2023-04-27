@@ -192,11 +192,14 @@ width: 48px;
 height: 48px;
 left: 393px;
 top: 8px;
-
-/* Color 1 */
-
 background: #C1DCDC;
 border-radius: 12px;
+transition-duration: 0.5s;
+}
+
+.Rectangle1:hover{
+background: #8cd3d3;;
+
 }
 
 .vector{
@@ -212,8 +215,6 @@ bottom: 0%;
 position: absolute;
 left: 480px;
 top: 310px;
-
-
 transform: rotate(-5deg);
 }
 
