@@ -1,3 +1,3 @@
 # frontend-crash-course
 
-![image](/Heggi2243/frontend-crash-course/blob/main/assignment%200/assignmen0.png?raw=true)
+![image](https://raw.githubusercontent.com/Heggi2243/frontend-crash-course/main/assignment%200/assignmen0.png)
