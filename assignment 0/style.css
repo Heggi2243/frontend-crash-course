@@ -733,6 +733,10 @@ footer{
     bottom: 170px;
 }
 
+.heggi:hover{
+width: 90px;
+}
+
 .sayHi{
     position: absolute;
     font-size: 12px;
