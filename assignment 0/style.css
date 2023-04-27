@@ -724,3 +724,21 @@ footer{
 .area a{
     color: rgba(30, 30, 30, 0.5);
 }
+
+.heggi{
+    position: absolute;
+    width: 80px;
+    left: 500px;
+    bottom: 170px;
+}
+
+.sayHi{
+    position: absolute;
+    font-size: 12px;
+    font-weight: 800;
+    left: 540px;
+    top: 45px;
+    width: 90px;
+    transform: rotate(10deg);
+    text-align: center;
+}
