@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap">
+    <title>Document</title>
+</head>
+<body>
+    
+
+      <!-- <input type="checkbox" id="${todoId}" ${status ? 'checked' : '' } >
+    <label for="${todoId}">${todoItem}</label>
+    <button type='button' class='btn delete'>Delete</button> -->
+
+    <img src="/image/draw.svg" class='draw' alt="">
+    <div class="container">
+        <img src="/image/blackboard.svg" class="blackboard"  alt="">
+        <div class="counterApp">
+            <h2>Counter App ( ｢･ω･) ｢</h2>
+            <div class="main">
+                <button type="button" class="btn">+</button>
+                <p class="counter">0</p>
+                <button type="button" class="btn">-</button>
+            </div>
+            <button type="button" class="reset">Reset</button>
+        </div>
+    </div>
+    <div class="todoList">
+        <h2>⭐Todo App⭐</h2>
+        <form class="form">
+            <input type="text" class="txt" placeholder="What's your todo?" required>
+            <button type="submit" class="btn addTodoBtn">Add</button>
+        </form>
+        <div class="list">
+            <ul class="ul">
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="clock">
+        <div class="date">
+            <span id="weekday">Sunday</span>
+            <span id="month">May</span>
+            <span id="day">17</span>
+            <span>,</span>
+            <span id="year">2023</span>	
+        </div>
+        <img src="/image/DigitalClock.png" class='digitalClock' alt="">
+        <div class="time">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+            <br>
+        </div>
+    </div>
+    
+    <div class="table"></div>
+
+
+    <script src="practice1.js"></script>
+</body>
+</html>

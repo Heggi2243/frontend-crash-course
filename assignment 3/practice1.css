@@ -1,0 +1,285 @@
+html {
+    height: 100%;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;;
+}
+
+body {
+    background-image: linear-gradient(45deg, #3fa7d6, #D7BEA8, #dab98b, #91aa7d);
+    background-size: 500%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    animation: colorChange 25s infinite alternate;
+    position: relative;
+}
+
+@keyframes colorChange {
+    0% {
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+  }
+
+.container {
+    width: 1200px;
+    height: 600px;
+    border:2px  solid #4d3f36;
+    position: relative;
+}
+.counterApp{
+    position: absolute;
+    right: 400px;
+    top: 85px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #FFF;
+}
+
+.counterApp h2{
+    color: #FFF;
+    text-shadow:#422800 0.1em 0.1em 0.2em;
+}
+
+.blackboard{
+    width: 550px;
+    position: absolute;
+    right: 260px;
+    top: 20px;
+}
+
+.todoApp{
+    position: absolute;
+    right: 0px;
+}
+
+.todoList {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 600px;
+}
+
+
+.todoList{
+    margin: 0;
+    width: 350px;
+    min-height: 200px;
+    border: 1px solid #806251;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #ffeee4;
+}
+
+.todoList h2{
+    margin-top: 40px;
+    color: #4d3f36;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.counter {
+    text-align: center;
+    width: 80px;
+    line-height: 25px;
+    margin: 0 20px;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    text-shadow:#422800 0.1em 0.1em 0.2em;
+}
+
+.txt{
+    text-align: center;
+    min-width: 50px;
+    margin: 0 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.main .btn{
+    box-shadow: #42280098 4px 4px 0 0;
+    width: 50px;
+}
+
+.btn{
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    color: #422800;
+    box-shadow: #422800 4px 4px 0 0;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn:active ,.reset:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+
+.delete{
+    font-size: 6px;
+    line-height: 20px;
+    box-shadow: #4e3a1b88 1.5px 1.5px 0 0;
+    color: #4e3a1b;
+    padding: 0 11px;
+    font-weight: 600;
+}
+
+.reset{
+    margin:25px 0px 10px 0px;
+    width: 60px;
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    box-shadow: #42280098 4px 4px 0 0;
+    color: #422800;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.list {
+    margin-top: 20px;
+}
+
+ul {
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 240px;
+}
+
+
+
+.checkbox input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+  }
+
+  .checkbox *,
+  .checkbox ::after,
+  .checkbox ::before {
+    box-sizing: border-box;
+  }
+
+  .checkbox {
+    position: relative;
+  }
+  .checkbox .check {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    width: 170px;
+    position: relative;
+  }
+
+  .checkbox .label svg {
+    vertical-align: middle;
+  }
+
+  .checkbox span{
+    position: absolute;
+    left: 35px;
+    top: 3px;
+  }
+
+  .checkbox .path1 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: .5s all;
+  }
+  .checkbox .check:checked + label svg g path {
+    stroke-dashoffset: 0;
+  }
+
+
+
+.clock{
+    position: absolute;
+    right: 30px;
+    bottom: 90px;
+}
+
+.date{
+    position: absolute;
+    bottom: 160px;
+    right: 40px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #422800;
+}
+
+.digitalClock{
+    width: 400px;
+    right: -10px;
+}
+
+
+.time{
+    color: #FFF;
+    position: absolute;
+    right: 50px;
+    bottom: 55px;
+    font-size: 30px;
+}
+
+
+.table{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: #4e3a1b;
+    bottom: 0px;
+}
+
+.draw{
+    width: 250px;
+    position: absolute;
+    top: 0px;
+    right: 80px;
+}
+
