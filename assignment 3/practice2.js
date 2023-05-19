@@ -52,7 +52,7 @@ const callAge = () =>{
         .then(data =>{
             const age = data.age;
             if (age === null){
-                showAge.textContent = `Can't get your age, your are unique!`
+                showAge.innerHTML = `Can't get your age,<br>your are too unique!`
             }else{
                 showAge.textContent = `your age sounds like ${age} 🤩`
             }
