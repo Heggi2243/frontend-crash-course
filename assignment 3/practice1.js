@@ -13,19 +13,19 @@ main.addEventListener('click',(e)=>{
 });
 
 const reset = document.querySelector('.reset');
-console.log(reset);
+
 reset.addEventListener('click',(e)=>{
     counterNum = 0;
     counter.textContent = counterNum;
 });
 
 
+
 // 1-2 todoList
 
 const txt = document.querySelector('.txt');
 const addTodoBtn = document.querySelector('.addTodoBtn');
-
-const ul = document.querySelector('.ul') //ul
+const ul = document.querySelector('.ul');
 
 
 function checkLocalStorage() {
@@ -51,10 +51,8 @@ addTodoBtn.addEventListener('click',(e)=>{
         const status = false;
         addNewTodo(todoId,todoItem,status);
         txt.value = '';
-        console.log(todoId);
-        
     }
-})
+});
 
 function syncData(state){
     localStorage.setItem("Heggi's toDo", JSON.stringify(state));
@@ -66,6 +64,10 @@ function getData(){
 
 
 function addNewTodo(todoId, todoItem, status) {
+    if (ul.children.length >= 10) {
+       alert('太多事沒做了吧！別玩了😣')
+        return;
+      }
     const li = document.createElement('li');
     li.setAttribute('data-id', todoId);
     li.setAttribute('class', 'checkbox');
@@ -81,11 +83,12 @@ function addNewTodo(todoId, todoItem, status) {
         <span>${todoItem}</span>
     </label>
     <button type='button' class='btn delete'>X</button>
+    <img src="image/line.svg" class='line'>
     `;
-    ul.appendChild(li);
+    ul.append(li);
     
 
-    const baseState = getData() || {}; // 如果狀態不存在，則創建一個空物件
+    const baseState = getData() || {};
     baseState[todoId] = { id: todoId, title: todoItem, status: status };
     syncData(baseState);
     
@@ -106,6 +109,40 @@ ul.addEventListener('click', (e)=>{
     }
     
     syncData(baseState);
-})
+});
 
-    
+
+const lang = 'en';
+const today = new Date();
+const options = {
+  weekday: "long",
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+};
+
+const formattedDate = today.toLocaleString(lang, options);
+const showToday = document.querySelector('.date');
+showToday.textContent = formattedDate;
+
+const hours = document.querySelector('#hours');
+const minutes = document.querySelector('#minutes');
+const seconds = document.querySelector('#seconds');
+
+function makeTime(){
+    const today = new Date();
+    const catchHours = String(today.getHours()).padStart(2, '0');
+    const catchMins = String(today.getMinutes()).padStart(2, '0');
+    const catchSec = String(today.getSeconds()).padStart(2, '0');
+
+    hours.textContent = catchHours;
+    minutes.textContent = catchMins;
+    seconds.textContent = catchSec;
+
+}
+makeTime();
+
+setInterval(makeTime, 1000);
+
+
+

@@ -17,6 +17,8 @@ body {
     justify-content: center;
     animation: colorChange 25s infinite alternate;
     position: relative;
+    min-width: 1280px;
+    min-height: 600px;
 }
 
 @keyframes colorChange {
@@ -26,68 +28,124 @@ body {
     100%{
         background-position: right;
     }
-  }
-
-.container {
-    width: 1200px;
-    height: 600px;
-    border:2px  solid #4d3f36;
-    position: relative;
 }
+
+.home{
+    position: absolute;
+    bottom: 50px;
+    left: 500px;
+    font-size: 20px;
+    z-index: 1;
+    text-decoration: none;
+    color: #422800;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.deco{
+    width: 6.5vw;
+    z-index: 1;
+} 
+
+.deco:hover {
+    width: 7vw;
+}
+
+
+.heggi{
+    position: absolute;
+    width: 100px;
+    z-index: 1;
+    bottom: 50px;
+    left: 400px;
+}
+
+.heggi:hover{
+    transform: rotate(10deg);
+}
+
+.counterApp h2{
+    margin-top: 15%;
+    color: #FFF;
+    text-shadow:#422800 0.1em 0.1em 0.2em;
+}
+
 .counterApp{
     position: absolute;
-    right: 400px;
-    top: 85px;
-    z-index: 1;
+    width: 32%;
+    height: 40%;
+    min-width: 500px;
+    min-height: 300px;
+    right: 32%;
+    top: 20%;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     color: #FFF;
+    background-image: url("image/blackboard.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-
-.counterApp h2{
-    color: #FFF;
-    text-shadow:#422800 0.1em 0.1em 0.2em;
-}
-
-.blackboard{
-    width: 550px;
-    position: absolute;
-    right: 260px;
-    top: 20px;
-}
-
-.todoApp{
-    position: absolute;
-    right: 0px;
-}
-
-.todoList {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    height: 600px;
-}
-
 
 .todoList{
+    padding: 0;
     margin: 0;
-    width: 350px;
-    min-height: 200px;
-    border: 1px solid #806251;
+    width: 18%;
+    min-width: 300px;
+    height: auto;
+    min-height: 500px; 
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background: #ffeee4;
+    position: absolute;
+    left: 6%; 
+    top: 6%;
+    background: #E8DB84;
 }
 
 .todoList h2{
-    margin-top: 40px;
+    margin: 8% 0 5% 0;
     color: #4d3f36;
+    z-index: 2;
+    
 }
+
+.form{
+    z-index: 2;
+}
+
+.list {
+    margin-top:5%;
+}
+
+.line{
+    position: absolute;
+    top: 30px;
+    max-width: 100%;
+}
+
+ul {
+    margin: 5% 0 40px 0;
+    padding: 0;
+    position: relative;
+}
+
+
+li {
+    list-style: none;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
 
 h3 {
     margin-top: 30px;
@@ -113,10 +171,16 @@ h3 {
 
 .txt{
     text-align: center;
-    min-width: 50px;
+    width: 60%;
+    font-size: 10%;
     margin: 0 10px;
     border: 2px solid #000;
     border-radius: 5px;
+}
+
+.btn.addTodoBtn{
+    font-size: 10%;
+    width: 25%;
 }
 
 .main .btn{
@@ -166,24 +230,6 @@ h3 {
     font-weight: 600;
     font-size: 14px;
     line-height: 25px;
-}
-
-.list {
-    margin-top: 20px;
-}
-
-ul {
-    margin: 20px 0 20px 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 240px;
 }
 
 
@@ -236,7 +282,20 @@ li {
     stroke-dashoffset: 0;
   }
 
+.date{
+    position: absolute;
+    bottom: 130px;
+    right: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #422800;
+}
 
+
+.digitalClock{
+    width: 400px;
+    right: -10px;
+}
 
 .clock{
     position: absolute;
@@ -244,27 +303,12 @@ li {
     bottom: 90px;
 }
 
-.date{
-    position: absolute;
-    bottom: 160px;
-    right: 40px;
-    font-size: 30px;
-    font-weight: 600;
-    color: #422800;
-}
-
-.digitalClock{
-    width: 400px;
-    right: -10px;
-}
-
-
 .time{
     color: #FFF;
     position: absolute;
     right: 50px;
     bottom: 55px;
-    font-size: 30px;
+    font-size: 32px;
 }
 
 
@@ -277,7 +321,7 @@ li {
 }
 
 .draw{
-    width: 250px;
+    width: 18vw;
     position: absolute;
     top: 0px;
     right: 80px;

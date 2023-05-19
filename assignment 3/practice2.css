@@ -1,0 +1,143 @@
+html {
+    height: 100%;
+}
+
+
+body {
+    background-image: linear-gradient(45deg, #93d0ec,#6bb7da, #5dc1f0, #e2dcb6, #D7BEA8, #dab98b, #daa97c);
+    background-size: 500%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    animation: colorChange 30s infinite alternate;
+    min-width: 1280px;
+    min-height: 600px;
+}
+
+.background{
+    background-image:  url("image/practice2-bg.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+@keyframes colorChange {
+    0% {
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+form{
+    margin-bottom: 20px;
+}
+
+.txt{
+    text-align: center;
+    margin: 0 10px;
+}
+
+p{
+    font-weight: 500;
+}
+
+.home{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-size: 20px;
+    z-index: 1;
+    text-decoration: none;
+    color: #422800;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.deco{
+    /* position: absolute; */
+    width: 6.5vw;
+    /* bottom: 40px;
+    right: 410px; */
+    z-index: 1;
+} 
+
+.deco:hover {
+    width: 7vw;
+}
+
+.activity{
+    background: #e2dcb6;
+    width: 28vw;
+    height: 35%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    left: 18%;
+}
+
+.guessAge{
+    background: #e2dcb6;
+    width: 28vw;
+    height: 35%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    right: 18%;
+}
+
+h2{
+    color: #382018;
+}
+
+.btn{
+    background-color: #fbeee0;
+    border: 2px solid #5c3223;
+    border-radius: 30px;
+    color: #552c1d;
+    box-shadow: #5c3223 4px 4px 0 0;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
