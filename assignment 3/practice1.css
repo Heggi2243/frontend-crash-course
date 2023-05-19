@@ -30,6 +30,14 @@ body {
     }
 }
 
+.light{
+    position: absolute;
+    top: 0;
+    width: 50vw;
+    min-width: 600px;
+    left: 27%;
+}
+
 .home{
     position: absolute;
     bottom: 50px;
@@ -323,6 +331,7 @@ h3 {
 
 .draw{
     width: 18vw;
+    min-width: 240px;
     position: absolute;
     top: 0px;
     right: 80px;
