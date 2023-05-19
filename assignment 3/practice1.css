@@ -47,6 +47,7 @@ body {
 
 .deco{
     width: 6.5vw;
+    min-width: 100px;
     z-index: 1;
 } 
 
