@@ -32,7 +32,7 @@ body {
 
 .light{
     position: absolute;
-    top: 0;
+    top: 0px;
     width: 50vw;
     min-width: 600px;
     left: 27%;
