@@ -44,13 +44,15 @@ function generateID() {
 }
 
 addTodoBtn.addEventListener('click',(e)=>{
-    if(txt.value !== ''){
-        e.preventDefault();
+    e.preventDefault();
+    if(txt.value.trim() !== ''){
         const todoId = generateID();
         const todoItem = txt.value;
         const status = false;
         addNewTodo(todoId,todoItem,status);
         txt.value = '';
+    } else {
+        alert(`Cannot be blank!`)
     }
 });
 

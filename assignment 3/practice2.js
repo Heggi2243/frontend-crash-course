@@ -36,7 +36,7 @@ let userName ='';
 sendAge.addEventListener('click', (e)=>{
     if(txt.value !== ''){
         e.preventDefault();
-        userName = txt.value;
+        userName = txt.value.trim();
         console.log(userName);
         callAge();
         txt.value = '';
@@ -46,23 +46,21 @@ sendAge.addEventListener('click', (e)=>{
 
 const callAge = () =>{
     const url2 = `https://api.agify.io?name=${userName}`;
+    const regex = /^[a-zA-Z]+$/;
 
         fetch(url2)
         .then(response => response.json())
         .then(data =>{
             const age = data.age;
-            if (age === null){
+            if (!regex.test(userName)){
+                showAge.textContent = `Please try again, English only.`;
+            } else if (age === null){
                 showAge.innerHTML = `Can't get your age,<br>your are too unique!`
-            }else{
+            }else if (regex.test(userName)){
                 showAge.textContent = `your age sounds like ${age} 🤩`
             }
-            
         })
         .catch(error =>{
             console.error('Error:', error);
         })
-        
-
-
-    console.log(url2);
 }
