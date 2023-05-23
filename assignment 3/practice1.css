@@ -454,6 +454,9 @@ h3 {
     .heggi,.deco{
         min-width: 70px;
     }
+    .txt, .btn.addTodoBtn{
+        font-size: 12px;
+    }
 
 
 }
