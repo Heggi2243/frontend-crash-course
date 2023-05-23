@@ -52,7 +52,8 @@ addTodoBtn.addEventListener('click',(e)=>{
         addNewTodo(todoId,todoItem,status);
         txt.value = '';
     } else {
-        alert(`Cannot be blank!`)
+        alert(`Cannot be blank!`);
+        txt.value = '';
     }
 });
 
