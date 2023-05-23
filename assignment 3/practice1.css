@@ -327,8 +327,11 @@ h3 {
 
 .time{
     color: #FFF;
-    font-size: 1.8vw;
-    margin-right: 11.5%;
+    font-size: 1.6vw;
+    position: absolute;
+    right: 8%;
+    width: 10vw;
+    text-align: center;
 }
 
 
@@ -454,6 +457,7 @@ h3 {
     .heggi,.deco{
         min-width: 70px;
     }
+
     .txt, .btn.addTodoBtn{
         font-size: 12px;
     }
