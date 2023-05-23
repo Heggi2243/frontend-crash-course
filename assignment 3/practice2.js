@@ -53,7 +53,7 @@ const callAge = () =>{
         .then(data =>{
             const age = data.age;
             if (!regex.test(userName)){
-                showAge.textContent = `Please try again, English only.`;
+                showAge.textContent = `English only,please try again.`;
             } else if (age === null){
                 showAge.innerHTML = `Can't get your age,<br>your are too unique!`
             }else if (regex.test(userName)){
